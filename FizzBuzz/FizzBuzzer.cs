@@ -10,8 +10,11 @@ namespace FizzBuzz
     {
         public string Get(int num)
         {
-
-            if ((num == 15) ||(num == 30))
+            if((num % 3 ==0) && (num % 5 == 0))
+            {
+                return "Fizzbuzz";
+            }
+            if(num == 15)
             {
                 return "FizzBuzz";
             }
