@@ -86,8 +86,29 @@ namespace FizzBuzz.Test
 
             var result = fizzBuzzer.Get(15);
 
+            Assert.That(result, Is.EqualTo("15"));
+        }
+
+        [Test]
+        public void Get_Returns_Buzz_for_mul_5_and_3_Equals_30()
+        {
+            var fizzBuzzer = new FizzBuzzer();
+
+            var result = fizzBuzzer.Get(30);
+
+            Assert.That(result, Is.EqualTo("30"));
+        }
+
+        [Test]
+        public void Get_Returns_Buzz_for_mul_5_and_3_Equals_FizBuzz()
+        {
+            var fizzBuzzer = new FizzBuzzer();
+
+            var result = fizzBuzzer.Get(30);
+
             Assert.That(result, Is.EqualTo("FizzBuzz"));
         }
     }
-
 }
+
+

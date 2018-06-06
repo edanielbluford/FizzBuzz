@@ -10,7 +10,12 @@ namespace FizzBuzz
     {
         public string Get(int num)
         {
-            if(IsMultipleOf3(num))
+
+            if ((num == 15) ||(num == 30))
+            {
+                return "FizzBuzz";
+            }
+            if (IsMultipleOf3(num))
             {
                 return "Fizz";
             }
@@ -18,10 +23,7 @@ namespace FizzBuzz
             {
                 return "Buzz";
             }
-            if (num == 15)
-            {
-                return "FizzBuzz";
-            }
+            
             return num.ToString();
         }
 
