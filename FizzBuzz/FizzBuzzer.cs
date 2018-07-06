@@ -10,35 +10,33 @@ namespace FizzBuzz
     {
         public string Get(int num)
         {
-            if((num % 3 ==0) && (num % 5 == 0))
-            {
-                return "Fizzbuzz";
-            }
-            if(num == 15)
+
+            if (IsMultipleofThree(num) && (IsMultipleofFive(num)))
             {
                 return "FizzBuzz";
             }
-            if (IsMultipleOf3(num))
+
+            if (IsMultipleofThree(num))
             {
                 return "Fizz";
             }
-            if(IsMultipleOf5(num))
+
+            if(IsMultipleofFive(num))
             {
                 return "Buzz";
             }
             
+            
             return num.ToString();
         }
 
-        private bool IsMultipleOf3(int numberToCheck)
+        private bool IsMultipleofThree(int number)
         {
-            return numberToCheck % 3 == 0;
+            return number % 3 == 0;
         }
-        private bool IsMultipleOf5(int numberToCheck)
+        private bool IsMultipleofFive(int number)
         {
-            return numberToCheck % 5 == 0;
+            return number % 5 == 0;
         }
     }
-
-
 }
